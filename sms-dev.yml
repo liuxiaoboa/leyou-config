@@ -5,11 +5,11 @@ spring:
     name: sms-service
 
   rabbitmq:
-    host: 60.205.218.70
+    host: 192.168.16.154
+    port: 15672
     username: super
     password: super
     virtual-host: /*
-
 leyou:
   sms:
     accessKeyId: LTAIc259TULYzaS7

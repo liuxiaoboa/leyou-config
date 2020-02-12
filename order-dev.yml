@@ -10,16 +10,19 @@ spring:
     hikari:
       maximum-pool-size: 200
       minimum-idle: 100
-  rabbitmq:
-    host: 192.168.19.121
-    username: /leyou
-    password: leyou
-    virtual-host: /leyou
-    template:
-      queue: leyou.order.delay.queue
-    publisher-confirms: true
   redis:
-    host: 192.168.19.121
+   ################### redis 单机版 start ##########################
+    host: 192.168.16.154
+    port: 6379
+    password: root
+    timeout: 6000
+    database: 7
+  rabbitmq:
+    host: 192.168.16.154
+    port: 15672
+    username: super
+    password: super
+    virtual-host: /*
 eureka:
   client:
     service-url:
